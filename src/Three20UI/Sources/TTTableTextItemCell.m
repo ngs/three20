@@ -109,6 +109,7 @@ static const UILineBreakMode kLineBreakMode = UILineBreakModeWordWrap;
 
   self.textLabel.frame = CGRectInset(self.contentView.bounds,
                                      kTableCellHPadding, kTableCellVPadding);
+	self.backgroundColor = TTSTYLEVAR(tableViewCellBackgroundColor);
 }
 
 

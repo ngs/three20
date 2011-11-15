@@ -208,6 +208,7 @@
 
     } else {
       TTURLRequest* request = [TTURLRequest requestWithURL:_urlPath delegate:self];
+      request.cachePolicy = TTURLRequestCachePolicyEtag;
       request.response = [[[TTURLImageResponse alloc] init] autorelease];
 
       // Give the delegate one chance to configure the requester.
