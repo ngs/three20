@@ -669,6 +669,10 @@
     if (backgroundColor) {
       _tableView.backgroundColor = backgroundColor;
       self.view.backgroundColor = backgroundColor;
+      UIView *bgView = [[UIView alloc] initWithFrame:self.view.frame];
+      bgView.backgroundColor = backgroundColor;
+      [_tableView setBackgroundView:bgView];
+      [bgView release];
     }
     [self.view addSubview:_tableView];
   }
