@@ -666,7 +666,7 @@
     UIColor* backgroundColor = _tableViewStyle == UITableViewStyleGrouped
     ? TTSTYLEVAR(tableGroupedBackgroundColor)
     : TTSTYLEVAR(tablePlainBackgroundColor);
-    if (backgroundColor) {
+    if (backgroundColor && ![NSStringFromClass(backgroundColor.class) isEqualToString:@"UICachedDeviceWhiteColor"]) {
       _tableView.backgroundColor = backgroundColor;
       self.view.backgroundColor = backgroundColor;
       UIView *bgView = [[UIView alloc] initWithFrame:self.view.frame];
